@@ -43,7 +43,7 @@ open index.html
 ### 2. ⚙️ Enable Services
 - 🔐 **Authentication** → **Google provider** → Add domains:
 - 🖥️ `localhost`
-- 🌍 `your-username.github.io`
+- 🌍 `your-username.firebase.name`
 - 💾 **Firestore Database** → Start in **test mode**
 
 ### 3. 🔧 Update Config
