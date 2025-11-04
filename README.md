@@ -32,27 +32,24 @@ git clone https://github.com/your-username/bug-bounty-checklist.git
 cd bug-bounty-checklist
 open index.html
 
-Firebase Setup
-1. Create Project
-Go to Firebase Console
+```
+### 🔥 Firebase Setup
 
-Create project "bug-bounty-checklist"
+### 1. 🚀 Create Project
+- 🌐 Go to [Firebase Console](https://console.firebase.google.com)
+- 📁 Create project **"bug-bounty-checklist"**
+- 📊 Disable **Google Analytics**
 
-Disable Google Analytics
+### 2. ⚙️ Enable Services
+- 🔐 **Authentication** → **Google provider** → Add domains:
+- 🖥️ `localhost`
+- 🌍 `your-username.github.io`
+- 💾 **Firestore Database** → Start in **test mode**
 
-2. Enable Services
-Authentication → Google provider → Add domains:
+### 3. 🔧 Update Config
+Replace in `index.html`:
 
-localhost
-
-your-username.github.io
-
-Firestore Database → Start in test mode
-
-3. Update Config
-Replace in index.html:
-
-javascript
+```javascript
 const firebaseConfig = {
   apiKey: "your-api-key",
   authDomain: "your-project.firebaseapp.com",
@@ -61,33 +58,15 @@ const firebaseConfig = {
   messagingSenderId: "123456789",
   appId: "your-app-id"
 };
-🎮 Usage
-Click arrows to expand/collapse
+```
+### Usage
 
-Check boxes to mark complete
+- ▶️ Click arrows to expand/collapse
+- ✅ Check boxes to mark complete
+- 🖱️ Right-click for context menu:
+- 📁 Add categories/items
+- 🔄 Expand/collapse sections
+- 🗑️ Delete nodes
 
-Right-click for context menu:
-
-Add categories/items
-
-Expand/collapse sections
-
-Delete nodes
-
-📋 Default Categories
-Bugs
-
-XSS (Blind XSS)
-
-SQL Injection (UNION, Boolean-based)
-
-Reconnaissance
-
-Subdomain enumeration
-
-Directory brute-forcing
-
-🔧 Controls
-📂 Expand All | 📁 Collapse All | 🔄 Reset All
 
 
