@@ -23,12 +23,7 @@ A comprehensive, interactive checklist for web application penetration testers a
 - **Icons**: Custom SVG + Emojis
 - **Hosting**: GitHub Pages
 
-## 🏁 Quick Start
-
-### Option 1: Use Online
-Visit: [https://your-username.github.io/bug-bounty-checklist](https://your-username.github.io/bug-bounty-checklist)
-
-### Option 2: Run Locally
+### Run Locally
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/bug-bounty-checklist.git
@@ -36,3 +31,31 @@ git clone https://github.com/your-username/bug-bounty-checklist.git
 # Open the HTML file
 cd bug-bounty-checklist
 open index.html
+
+#  Firebase Setup
+
+## 1. Create Project
+- Go to [Firebase Console](https://console.firebase.google.com)
+- Create project "bug-bounty-checklist"
+- Disable Google Analytics
+
+## 2. Enable Services
+- **Authentication** → Google provider → Add domains:
+  - `localhost`
+  - `your-username.github.io`
+- **Firestore Database** → Start in test mode
+
+## 3. Update Config
+Replace in `index.html`:
+
+```javascript
+const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-project.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "your-app-id"
+};
+
+
